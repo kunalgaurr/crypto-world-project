@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width ">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="preloader">
+        <div class="outer-circle">
+            <div class="middle-circle">
+                <div class="inner-circle"></div>
+            </div>
+        </div>
+    </div> -->
+    <nav>
+        <h1 class="main-text text-5xl">Crypto World</h1>
+        <form action="">
+            <input type="text" id="userInput"
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-last-name">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit"
+                onclick=handleOnClick() id="submit">Search Currency</button>
+        </form>
+    </nav>
+    <div class="data-area">
+        <h1 class="sub-text">Name: <span id="name"></span></h1>
+        <p class="data-text">Price: <span id="price"></span></p>
+        <p class="data-text">Market Cap <span id="marketCap"></span></p>
+        <p class="data-text">Rank: <span id="rank"></span></p>
+        <p class="data-text">Website Url: <span id="website"></span></p>
+        <p class="data-text">Change: <span id="change"></span></p>
+        <p class="data-text">Number of Exchanges listed: <span id="listed"></span></p>
+    </div>
+    <div class="container">
+        <table class="border-collapse border border-slate-500 ...">
+            <tr>
+                <th class='border border-slate-600 ...'>Rank</th>
+                <th class='border border-slate-600 ...'>Name</th>
+                <th class='border border-slate-600 ...'>Price</th>
+                <th class='border border-slate-600 ...'>Market Cap</th>
+                <th class='border border-slate-600 ...'>Change</th>
+                <!-- <th class = 'border border-slate-600 ...'>Volume</th class = 'border border-slate-600 ...'> -->
+            </tr>
+            <tr>
+                <td class='border border-slate-700 ...' id="rank1">1</td>
+                <th class='border border-slate-600 ...' id="rank1Name">Name</th class='border border-slate-600 ...'>
+                <td class='border border-slate-700 ...'><span id="rank1Price">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank1MarketCap">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank1Change">1</span></td>
+            </tr>
+            <tr>
+                <td class='border border-slate-700 ...' id="rank2">2</td>
+                <th class='border border-slate-600 ...' id="rank2Name">Name</th class='border border-slate-600 ...'>
+                <td class='border border-slate-700 ...'><span id="rank2Price">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank2MarketCap">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank2Change">1</span></td>
+            </tr>
+            <tr>
+                <td class='border border-slate-700 ...' id="rank3">3</td>
+                <th class='border border-slate-600 ...' id="rank3Name">Name</th class='border border-slate-600 ...'>
+                <td class='border border-slate-700 ...'><span id="rank3Price">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank3MarketCap">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank3Change">1</span></td>
+            </tr>
+            <tr>
+                <td class='border border-slate-700 ...' id="rank4">4</td>
+                <th class='border border-slate-600 ...' id="rank4Name">Name</th class='border border-slate-600 ...'>
+                <td class='border border-slate-700 ...'><span id="rank4Price">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank4MarketCap">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank4Change">1</span></td>
+            </tr>
+            <tr>
+                <td class='border border-slate-700 ...' id="rank5">5</td>
+                <th class='border border-slate-600 ...' id="rank5Name">Name</th class='border border-slate-600 ...'>
+                <td class='border border-slate-700 ...'><span id="rank5Price">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank5MarketCap">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank5Change">1</span></td>
+            </tr>
+            <tr>
+                <td class='border border-slate-700 ...' id="rank6">6</td>
+                <th class='border border-slate-600 ...' id="rank6Name">Name</th class='border border-slate-600 ...'>
+                <td class='border border-slate-700 ...'><span id="rank6Price">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank6MarketCap">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank6Change">1</span></td>
+            </tr>
+            <tr>
+                <td class='border border-slate-700 ...' id="rank7">7</td>
+                <th class='border border-slate-600 ...' id="rank7Name">Name</th class='border border-slate-600 ...'>
+                <td class='border border-slate-700 ...'><span id="rank7Price">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank7MarketCap">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank7Change">1</span></td>
+            </tr>
+            <tr>
+                <td class='border border-slate-700 ...' id="rank8">8</td>
+                <th class='border border-slate-600 ...' id="rank8Name">Name</th class='border border-slate-600 ...'>
+                <td class='border border-slate-700 ...'><span id="rank8Price">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank8MarketCap">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank8Change">1</span></td>
+            </tr>
+            <tr>
+                <td class='border border-slate-700 ...' id="rank9">9</td>
+                <th class='border border-slate-600 ...' id="rank9Name">Name</th class='border border-slate-600 ...'>
+                <td class='border border-slate-700 ...'><span id="rank9Price">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank9MarketCap">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank9Change">1</span></td>
+            </tr>
+            <tr>
+                <td class='border border-slate-700 ...' id="rank10">10</td>
+                <th class='border border-slate-600 ...' id="rank10Name">Name</th class='border border-slate-600 ...'>
+                <td class='border border-slate-700 ...'><span id="rank10Price">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank10MarketCap">1</span></td>
+                <td class='border border-slate-700 ...'><span id="rank10Change">1</span></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+  background-color: #2d3748;
+  color: white;
+}
+html {
+  --scrollbarBG: #2d3748;
+  --thumbBG: white;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+.preloader {
+  height: 100vh;
+  background-color: #2d3748;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  z-index: 10;
+  overflow: hidden;
+}
+.outer-circle,
+.middle-circle,
+.inner-circle {
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+}
+.outer-circle {
+  border-bottom: 7px solid green;
+  height: 10rem;
+  border-radius: 100px;
+  animation: rotation 1s infinite;
+}
+
+.middle-circle {
+  border-bottom: 5px solid blue;
+  height: 7rem;
+  border-radius: 100px;
+  animation: rotation 1s infinite;
+}
+.inner-circle {
+  border-radius: 100px;
+  border-bottom: 3px solid red;
+  height: 5rem;
+  animation: rotation 10s infinite;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 2rem;
+}
+input {
+  margin: 0 1rem;
+}
+
+#userInput {
+  width: 20rem;
+}
+
+.main-text {
+  padding: 0 2rem;
+}
+.data-area {
+  width: 100%;
+  padding: 2rem 10rem;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.sub-text {
+  font-size: 2.5rem;
+}
+.container {
+  display: grid;
+  place-items: center;
+}
+td,
+th {
+  padding: 1rem;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

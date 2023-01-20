@@ -1,0 +1,7 @@
+name.innerHTML = response.data.coin.name;
+price.innerHTML = response.data.coin.price;
+marketCap.innerHTML = response.data.coin.marketCap;
+rank.innerHTML = response.data.coin.rank;
+website.innerHTML = response.data.coin.websiteUrl;
+change.innerHTML = response.data.coin.change;
+listed.innerHTML = response.data.coin.numberOfExchanges;
